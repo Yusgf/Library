@@ -62,7 +62,7 @@ namespace Library
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            UserForm Ueser = new UserForm();
+            UForm Ueser = new UForm();
             Ueser.TopLevel = false;
             Ueser.FormBorderStyle = FormBorderStyle.None;
             Ueser.Dock = DockStyle.Fill;

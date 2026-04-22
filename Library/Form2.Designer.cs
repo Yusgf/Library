@@ -155,7 +155,7 @@
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.HighlightText;
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
-            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(200, 0);
             this.mainPanel.Name = "mainPanel";
@@ -174,6 +174,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Main";
+            this.TransparencyKey = System.Drawing.Color.Silver;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
