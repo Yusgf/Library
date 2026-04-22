@@ -52,8 +52,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
+            this.panel1.Size = new System.Drawing.Size(400, 865);
             this.panel1.TabIndex = 0;
             // 
             // btnLogout
@@ -64,10 +65,11 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnLogout.Location = new System.Drawing.Point(0, 415);
+            this.btnLogout.Location = new System.Drawing.Point(0, 798);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(6);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(60, 0, 50, 5);
-            this.btnLogout.Size = new System.Drawing.Size(200, 35);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(120, 0, 100, 10);
+            this.btnLogout.Size = new System.Drawing.Size(400, 67);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,10 +83,11 @@
             this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrow.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBorrow.Location = new System.Drawing.Point(0, 263);
+            this.btnBorrow.Location = new System.Drawing.Point(0, 503);
+            this.btnBorrow.Margin = new System.Windows.Forms.Padding(6);
             this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnBorrow.Size = new System.Drawing.Size(200, 35);
+            this.btnBorrow.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnBorrow.Size = new System.Drawing.Size(400, 67);
             this.btnBorrow.TabIndex = 6;
             this.btnBorrow.Text = "Borrow";
             this.btnBorrow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,10 +101,11 @@
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUser.Location = new System.Drawing.Point(0, 228);
+            this.btnUser.Location = new System.Drawing.Point(0, 436);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(6);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnUser.Size = new System.Drawing.Size(200, 35);
+            this.btnUser.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(400, 67);
             this.btnUser.TabIndex = 5;
             this.btnUser.Text = "User";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,10 +119,11 @@
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBook.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBook.Location = new System.Drawing.Point(0, 193);
+            this.btnBook.Location = new System.Drawing.Point(0, 369);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(6);
             this.btnBook.Name = "btnBook";
-            this.btnBook.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnBook.Size = new System.Drawing.Size(200, 35);
+            this.btnBook.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnBook.Size = new System.Drawing.Size(400, 67);
             this.btnBook.TabIndex = 9;
             this.btnBook.Text = "Book";
             this.btnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,10 +136,11 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 137);
+            this.label1.Location = new System.Drawing.Point(0, 263);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(45, 20, 0, 20);
-            this.label1.Size = new System.Drawing.Size(157, 56);
+            this.label1.Padding = new System.Windows.Forms.Padding(90, 38, 0, 38);
+            this.label1.Size = new System.Drawing.Size(305, 106);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome , Admin";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -146,9 +152,10 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(200, 137);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 38, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(400, 263);
             this.panel2.TabIndex = 7;
             // 
             // mainPanel
@@ -157,20 +164,22 @@
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(200, 0);
+            this.mainPanel.Location = new System.Drawing.Point(400, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(6);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(600, 450);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 865);
             this.mainPanel.TabIndex = 2;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1600, 865);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Main";
