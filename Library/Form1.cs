@@ -27,7 +27,7 @@ namespace Library
             }
             else 
             {
-                MessageBox.Show("you can enter password");
+                MessageBox.Show("You entered an incorrect username or password.");
             }
         }
 
@@ -44,6 +44,11 @@ namespace Library
         
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
