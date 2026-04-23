@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.comboCategory);
             this.panel1.Controls.Add(this.numCopies);
@@ -78,19 +78,20 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1787, 955);
+            this.panel1.Size = new System.Drawing.Size(2807, 1302);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(31, 488);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1686, 384);
+            this.panel4.Size = new System.Drawing.Size(2536, 664);
             this.panel4.TabIndex = 12;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // dataGridView1
             // 
@@ -102,14 +103,13 @@
             this.Author,
             this.Category,
             this.Copies});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 44);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 68);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1633, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(2490, 593);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BookName
             // 
@@ -151,6 +151,7 @@
             // 
             // comboCategory
             // 
+            this.comboCategory.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.comboCategory.FormattingEnabled = true;
             this.comboCategory.Items.AddRange(new object[] {
             "Fiction",
@@ -161,7 +162,8 @@
             "Self-Help",
             "Self-Development",
             "Philosophy",
-            "Business & Economics"});
+            "Business & Economics",
+            "psychology"});
             this.comboCategory.Location = new System.Drawing.Point(499, 312);
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(641, 33);
@@ -170,6 +172,7 @@
             // 
             // numCopies
             // 
+            this.numCopies.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.numCopies.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.numCopies.FormattingEnabled = true;
             this.numCopies.ItemHeight = 25;
@@ -221,6 +224,7 @@
             // 
             // txtAuthor
             // 
+            this.txtAuthor.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtAuthor.Location = new System.Drawing.Point(499, 219);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(641, 31);
@@ -238,6 +242,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtName.Location = new System.Drawing.Point(499, 127);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(641, 31);
@@ -259,7 +264,7 @@
             this.Edit.BackColor = System.Drawing.Color.SteelBlue;
             this.Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit.ForeColor = System.Drawing.Color.White;
-            this.Edit.Location = new System.Drawing.Point(1384, 243);
+            this.Edit.Location = new System.Drawing.Point(1557, 243);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(261, 73);
             this.Edit.TabIndex = 3;
@@ -272,7 +277,7 @@
             this.txtRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemove.ForeColor = System.Drawing.Color.White;
-            this.txtRemove.Location = new System.Drawing.Point(1384, 367);
+            this.txtRemove.Location = new System.Drawing.Point(1557, 367);
             this.txtRemove.Name = "txtRemove";
             this.txtRemove.Size = new System.Drawing.Size(261, 73);
             this.txtRemove.TabIndex = 2;
@@ -282,10 +287,13 @@
             // 
             // txtBookName
             // 
-            this.txtBookName.BackColor = System.Drawing.Color.ForestGreen;
+            this.txtBookName.BackColor = System.Drawing.Color.White;
+            this.txtBookName.FlatAppearance.BorderSize = 0;
+            this.txtBookName.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.txtBookName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookName.ForeColor = System.Drawing.Color.White;
-            this.txtBookName.Location = new System.Drawing.Point(1384, 103);
+            this.txtBookName.ForeColor = System.Drawing.Color.Black;
+            this.txtBookName.Location = new System.Drawing.Point(1557, 103);
             this.txtBookName.Name = "txtBookName";
             this.txtBookName.Size = new System.Drawing.Size(261, 73);
             this.txtBookName.TabIndex = 1;
@@ -301,7 +309,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1787, 74);
+            this.panel2.Size = new System.Drawing.Size(3329, 74);
             this.panel2.TabIndex = 0;
             // 
             // panel3
@@ -316,11 +324,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(715, 0);
+            this.label1.Location = new System.Drawing.Point(1145, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 67);
             this.label1.TabIndex = 0;
             this.label1.Text = "Books";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // colorDialog2
             // 
@@ -330,7 +339,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1787, 955);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(2807, 1302);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "BookForm";

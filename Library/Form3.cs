@@ -19,7 +19,13 @@ namespace Library
 
         private void BookForm_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.Rows.Add("Harry Potter", "J.K. Rowling", "Fantasy", 10);
+            dataGridView1.Rows.Add("Atomic Habits", "James Clear", "Self Development", 5);
+            dataGridView1.Rows.Add("The Hobbit", "J.R.R. Tolkien", "Fantasy", 7);
+            dataGridView1.Rows.Add("Clean Code", "Robert C. Martin", "Programming", 3);
+            dataGridView1.Rows.Add("ارض الزيكولا", " عمرو عبد الحميد", "Fiction", 15);
+            dataGridView1.Rows.Add("فن اللامبلاه", "Mark Manson", "psychology", 9);
+            dataGridView1.Rows.Add(" Cosmos", "Carl Sagan", "Science", 18);
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
@@ -58,21 +64,48 @@ namespace Library
 
         private void Edit_Click(object sender, EventArgs e)
         {
-            dataGridView1 = new DataGridView();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var row = dataGridView1.SelectedRows[0];
+
+                if (string.IsNullOrWhiteSpace(txtName.Text))
+                {
+                    txtName.Text = row.Cells[0].Value?.ToString();
+                    txtAuthor.Text = row.Cells[1].Value?.ToString();
+                    comboCategory.Text = row.Cells[2].Value?.ToString();
+                    numCopies.Text = row.Cells[3].Value?.ToString();
+                }
+                else
+                {
+                    row.Cells[0].Value = txtName.Text;
+                    row.Cells[1].Value = txtAuthor.Text;
+                    row.Cells[2].Value = comboCategory.Text;
+                    row.Cells[3].Value = numCopies.Text;
+
+
+                    txtName.Clear();
+                    txtAuthor.Clear();
+                    comboCategory.SelectedIndex = -1;
+                    numCopies.ClearSelected();
+                    MessageBox.Show("Done");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select Row");
+            }
         }
 
         private void txtRemove_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtName.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtAuthor.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                        comboCategory.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                                    numCopies.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("   Select Row   ");
+            }
         }
 
         private void comboCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,6 +113,16 @@ namespace Library
             comboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
 
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
